@@ -1,0 +1,46 @@
+!!!5
+%html
+  %head
+    %title What a Fun Page Title
+    %meta(charset="utf-8")
+    // Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    %meta(content="IE=edge,chrome=1" http-equiv="X-UA-Compatible")
+
+    = stylesheet_link_tag "application.css"
+    = yield_content :head
+
+  %body{ :class => page_classes }
+
+    #header_wrap
+      #header
+        #logo
+          %p Logo
+        #sub_nav
+          Sub nav or Social Media
+
+        #nav
+          %ul
+            %li= link_to "Link", '#'
+            %li= link_to "Link", '#'
+            %li= link_to "Link", '#'
+            %li= link_to "Link", '#'
+            %li= link_to "Home", '#'
+
+    #banner_wrap
+      #banner
+        Rotating Banners
+
+    #content_bg
+    #content_wrap
+      #content= yield;
+
+    #footer_bg
+    #footer_wrap
+      #footer
+        %p Copyright 2012 sitename.com
+            
+
+
+
+
+
